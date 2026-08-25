@@ -94,6 +94,7 @@
   --font-scale: 1.9;
 }
 
+:root[data-fontsize='xxxlarge'] .cat-icon,
 :root[data-fontsize='xxxxlarge'] .cat-icon {
   display: none;
 }

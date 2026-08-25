@@ -22,7 +22,7 @@ export default function HomeScreen({
             aria-pressed={mode === 'card'}
             aria-label="揀字"
           >
-            選🔍
+            選
           </button>
           <button
             className={`icon-btn mode-btn${mode === 'text' ? ' active' : ''}`}
@@ -30,7 +30,7 @@ export default function HomeScreen({
             aria-pressed={mode === 'text'}
             aria-label="打字"
           >
-            寫✍️
+            寫
           </button>
         </div>
         <button className="icon-btn" onClick={onOpenRecent} aria-label="最近用過">
