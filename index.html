@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-HK">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#00695c" />
+    <meta name="description" content="幫助失聲/發聲困難人士用字卡同打字快速表達需要" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="TellMe" />
+    <title>TellMe 講</title>
+    <script>
+      (function () {
+        try {
+          var s = JSON.parse(localStorage.getItem('tm_settings') || '{}')
+          document.documentElement.setAttribute('data-theme', s.theme || 'light')
+          document.documentElement.setAttribute('data-fontsize', s.fontSize || 'large')
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light')
+          document.documentElement.setAttribute('data-fontsize', 'large')
+        }
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

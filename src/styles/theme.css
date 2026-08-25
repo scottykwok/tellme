@@ -1,0 +1,93 @@
+:root {
+  --accent-red-bg: #c62828;
+  --accent-red-fg: #ffffff;
+  --accent-teal-bg: #00695c;
+  --accent-teal-fg: #ffffff;
+  --accent-purple-bg: #4527a0;
+  --accent-purple-fg: #ffffff;
+  --accent-brown-bg: #6d4c26;
+  --accent-brown-fg: #ffffff;
+  --accent-orange-bg: #d2691e;
+  --accent-orange-fg: #ffffff;
+  --accent-pink-bg: #ad1457;
+  --accent-pink-fg: #ffffff;
+  --accent-green-bg: #2e7d32;
+  --accent-green-fg: #ffffff;
+}
+
+:root[data-theme='light'] {
+  --bg: #f5f4f0;
+  --fg: #1a1a1a;
+  --surface: #ffffff;
+  --surface-fg: #1a1a1a;
+  --muted: #5a5a5a;
+  --border: #d8d6cf;
+  --focus-ring: #0057d8;
+  --btn-bg: #ffffff;
+  --btn-border: #cfcdc5;
+  --overlay-bg: #ffffff;
+  --overlay-fg: #111111;
+  --primary: #0057d8;
+  --primary-fg: #ffffff;
+}
+
+:root[data-theme='dark'] {
+  --bg: #15161a;
+  --fg: #f2f1ee;
+  --surface: #1f2126;
+  --surface-fg: #f2f1ee;
+  --muted: #b7b6b2;
+  --border: #34363c;
+  --focus-ring: #7fb1ff;
+  --btn-bg: #1f2126;
+  --btn-border: #3c3e45;
+  --overlay-bg: #15161a;
+  --overlay-fg: #f7f6f3;
+  --primary: #7fb1ff;
+  --primary-fg: #0b1220;
+}
+
+:root[data-theme='highContrast'] {
+  --bg: #000000;
+  --fg: #ffffff;
+  --surface: #000000;
+  --surface-fg: #ffffff;
+  --muted: #ffffff;
+  --border: #ffffff;
+  --focus-ring: #ffff00;
+  --btn-bg: #000000;
+  --btn-border: #ffffff;
+  --overlay-bg: #000000;
+  --overlay-fg: #ffffff;
+  --primary: #ffff00;
+  --primary-fg: #000000;
+
+  --accent-red-bg: #ff1a1a;
+  --accent-red-fg: #000000;
+  --accent-teal-bg: #00e6d0;
+  --accent-teal-fg: #000000;
+  --accent-purple-bg: #c39bff;
+  --accent-purple-fg: #000000;
+  --accent-brown-bg: #ffb347;
+  --accent-brown-fg: #000000;
+  --accent-orange-bg: #ff8c00;
+  --accent-orange-fg: #000000;
+  --accent-pink-bg: #ff4fa3;
+  --accent-pink-fg: #000000;
+  --accent-green-bg: #4dff4d;
+  --accent-green-fg: #000000;
+}
+
+:root[data-fontsize='large'] {
+  --font-scale: 1;
+}
+:root[data-fontsize='xlarge'] {
+  --font-scale: 1.18;
+}
+:root[data-fontsize='xxlarge'] {
+  --font-scale: 1.4;
+}
+
+html {
+  font-size: calc(18px * var(--font-scale));
+}
