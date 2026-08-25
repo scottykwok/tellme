@@ -74,7 +74,7 @@ Elderly people in Hong Kong who have lost their voice or have severely reduced s
 - Grid of large, high-contrast category buttons — nothing else on this screen competes for attention. Each button: icon + Traditional Chinese label, minimum touch target ~88×88pt (larger than typical mobile guidance of 44pt, given tremor/vision constraints).
 - Default categories, in fixed display order (see §7 for starter content and §5.1.1 for the ordering rationale): 緊急 (Emergency), 身體 (Body), 身體部位 (Body Parts), 護理 (Toilet & Care), 飲食 (Food & Drink), 感受 (Feelings), 日常 (Common Phrases).
 - 緊急 (Emergency) category is visually distinguished (e.g. red/orange accent even in other themes) and always pinned as the first or most prominent button — this is a safety-relevant path and should never require more than 2 taps from launch.
-- A persistent, always-visible mode toggle (Card mode ⇄ Text mode) and a "Recent" shortcut are reachable from the home screen without entering a category. No other controls, labels, or settings visible here — anything not essential to "express a need right now" belongs in Settings, not the Home screen.
+- A persistent, always-visible mode toggle — two individual circular icon buttons (選🔍 for Card mode, 寫✍️ for Text mode) rather than a text-labelled segmented control — and a "Recent" shortcut are reachable from the home screen without entering a category. No other controls, labels, or settings visible here — anything not essential to "express a need right now" belongs in Settings, not the Home screen.
 
 #### 5.1.1 Categorization principles
 
