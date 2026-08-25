@@ -1,10 +1,15 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { predictPhrases } from '../lib/predict.js'
 
 export default function TextPanel({ allPhrases, recent, onSend }) {
   const [query, setQuery] = useState('')
+  const textareaRef = useRef(null)
 
   const suggestions = predictPhrases(query, allPhrases, recent, 8)
+
+  useEffect(() => {
+    textareaRef.current?.focus()
+  }, [])
 
   const submitTyped = () => {
     const text = query.trim()
@@ -13,23 +18,36 @@ export default function TextPanel({ allPhrases, recent, onSend }) {
     setQuery('')
   }
 
+  const clearTyped = () => {
+    setQuery('')
+    textareaRef.current?.focus()
+  }
+
   return (
     <div className="text-panel">
       <div className="text-input-row">
-        <input
+        <textarea
+          ref={textareaRef}
           className="big-input"
-          type="text"
-          inputMode="text"
-          placeholder="喺呢度打字（可用手寫輸入）"
+          rows={3}
+          placeholder="（輸入）"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={(e) => {
-            if (e.key === 'Enter') submitTyped()
+            if (e.key === 'Enter' && !e.shiftKey) {
+              e.preventDefault()
+              submitTyped()
+            }
           }}
         />
-        <button className="send-btn" onClick={submitTyped} disabled={!query.trim()}>
-          顯示
-        </button>
+        <div className="text-input-actions">
+          <button className="clear-btn" onClick={clearTyped} disabled={!query}>
+            清除
+          </button>
+          <button className="send-btn" onClick={submitTyped} disabled={!query.trim()}>
+            顯示
+          </button>
+        </div>
       </div>
 
       {suggestions.length > 0 && (
@@ -44,21 +62,6 @@ export default function TextPanel({ allPhrases, recent, onSend }) {
           </div>
         </div>
       )}
-
-      <div className="panel-section">
-        <h2>最近用過</h2>
-        {recent.length === 0 ? (
-          <div className="empty-note">仲未有用過嘅字句</div>
-        ) : (
-          <div className="chip-list">
-            {recent.map((m) => (
-              <button key={m.id} className="chip" onClick={() => onSend(m.text)}>
-                {m.text}
-              </button>
-            ))}
-          </div>
-        )}
-      </div>
     </div>
   )
 }

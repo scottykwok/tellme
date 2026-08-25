@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { FONT_SIZES, THEMES } from '../lib/storage.js'
 
-const FONT_LABELS = { large: '大', xlarge: '較大', xxlarge: '最大' }
+const FONT_LABELS = { large: '大', xlarge: '較大', xxlarge: '更大', xxxlarge: '特大', xxxxlarge: '最大' }
 const THEME_LABELS = { light: '淺色', dark: '深色', highContrast: '高對比' }
 
 export default function SettingsScreen({ settings, onChange, onClearRecent, onBack }) {

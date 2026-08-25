@@ -111,7 +111,15 @@ export default function App() {
   return (
     <div className="app-root">
       {body}
-      {message !== null && <MessageDisplay text={message} onDismiss={() => setMessage(null)} />}
+      {message !== null && (
+        <MessageDisplay
+          text={message}
+          onDismiss={() => {
+            setMessage(null)
+            setScreen('home')
+          }}
+        />
+      )}
     </div>
   )
 }

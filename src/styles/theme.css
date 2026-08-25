@@ -87,6 +87,16 @@
 :root[data-fontsize='xxlarge'] {
   --font-scale: 1.4;
 }
+:root[data-fontsize='xxxlarge'] {
+  --font-scale: 1.65;
+}
+:root[data-fontsize='xxxxlarge'] {
+  --font-scale: 1.9;
+}
+
+:root[data-fontsize='xxxxlarge'] .cat-icon {
+  display: none;
+}
 
 html {
   font-size: calc(18px * var(--font-scale));

@@ -1,4 +1,5 @@
 import TextPanel from './TextPanel.jsx'
+import { fitFontSize } from '../lib/textFit.js'
 
 export default function HomeScreen({
   mode,
@@ -16,24 +17,26 @@ export default function HomeScreen({
       <div className="topbar">
         <div className="mode-toggle" role="tablist" aria-label="輸入模式">
           <button
-            className={mode === 'card' ? 'active' : ''}
+            className={`icon-btn mode-btn${mode === 'card' ? ' active' : ''}`}
             onClick={() => onModeChange('card')}
             aria-pressed={mode === 'card'}
+            aria-label="揀字"
           >
-            揀字
+            選🔍
           </button>
           <button
-            className={mode === 'text' ? 'active' : ''}
+            className={`icon-btn mode-btn${mode === 'text' ? ' active' : ''}`}
             onClick={() => onModeChange('text')}
             aria-pressed={mode === 'text'}
+            aria-label="打字"
           >
-            打字
+            寫✍️
           </button>
         </div>
         <button className="icon-btn" onClick={onOpenRecent} aria-label="最近用過">
           🕘
         </button>
-        <button className="icon-btn settings-btn" onClick={onOpenSettings} aria-label="設定">
+        <button className="icon-btn" onClick={onOpenSettings} aria-label="設定">
           ⚙
         </button>
       </div>
@@ -47,7 +50,9 @@ export default function HomeScreen({
               onClick={() => onSelectCategory(cat.id)}
             >
               <span className="cat-icon">{cat.icon}</span>
-              <span className="cat-label">{cat.label}</span>
+              <span className="cat-label" style={{ fontSize: fitFontSize(cat.label) }}>
+                {cat.label}
+              </span>
             </button>
           ))}
         </div>

@@ -72,7 +72,7 @@ Elderly people in Hong Kong who have lost their voice or have severely reduced s
 ### 5.1 Home Screen
 
 - Grid of large, high-contrast category buttons — nothing else on this screen competes for attention. Each button: icon + Traditional Chinese label, minimum touch target ~88×88pt (larger than typical mobile guidance of 44pt, given tremor/vision constraints).
-- Default categories, in fixed display order (see §7 for starter content and §5.1.1 for the ordering rationale): 緊急 (Emergency), 身體 (Body), 身體部位 (Body Parts), 如廁與護理 (Toilet & Care), 飲食 (Food & Drink), 感受 (Feelings), 日常用語 (Common Phrases).
+- Default categories, in fixed display order (see §7 for starter content and §5.1.1 for the ordering rationale): 緊急 (Emergency), 身體 (Body), 身體部位 (Body Parts), 護理 (Toilet & Care), 飲食 (Food & Drink), 感受 (Feelings), 日常 (Common Phrases).
 - 緊急 (Emergency) category is visually distinguished (e.g. red/orange accent even in other themes) and always pinned as the first or most prominent button — this is a safety-relevant path and should never require more than 2 taps from launch.
 - A persistent, always-visible mode toggle (Card mode ⇄ Text mode) and a "Recent" shortcut are reachable from the home screen without entering a category. No other controls, labels, or settings visible here — anything not essential to "express a need right now" belongs in Settings, not the Home screen.
 
@@ -81,7 +81,7 @@ Elderly people in Hong Kong who have lost their voice or have severely reduced s
 Findability under stress/impairment is a grouping problem, not just a labeling one — these rules govern how categories and phrases are organized, and should be followed when the vocabulary is edited later:
 
 - **Cap at 5–7 top-level categories.** Beyond that, quick visual scanning breaks down for a patient under discomfort or time pressure. The starter set (§7) now uses **7 — the ceiling of this range**; any further vocabulary growth should be merged into an existing category rather than adding a new top-level one (see 身體部位 note below).
-- **Fixed order, not alphabetical or user-sortable in MVP.** Predictability beats cleverness — a patient should be able to build muscle memory for "emergency is always top-left." Order: 緊急 first (safety-critical), then 身體 and 身體部位 and 如廁與護理 (physical needs — how it feels, where it hurts, and physical care), then 飲食, then 感受 and 日常用語 (softer/social needs) last.
+- **Fixed order, not alphabetical or user-sortable in MVP.** Predictability beats cleverness — a patient should be able to build muscle memory for "emergency is always top-left." Order: 緊急 first (safety-critical), then 身體 and 身體部位 and 護理 (physical needs — how it feels, where it hurts, and physical care), then 飲食, then 感受 and 日常 (softer/social needs) last.
 - **身體 vs 身體部位 split intentionally.** 身體 holds *symptoms/sensations* (頭痛, 好攰, 郁唔到...); 身體部位 holds plain *body-part names* (眼/耳/口/鼻/喉/氣管/上身/下身/手/大腿) as standalone cards — tapping one just shows that word (e.g. 喉) for the caregiver to ask follow-up questions verbally. This was a deliberate choice against a two-step "pick body part → pick symptom" composer, to keep the single-tap-immediate interaction model consistent everywhere in card mode.
 - **One consistent icon + accent color per category**, reused identically on the home button, the category header, and the back button — so a patient can relocate a category by shape/color recognition alone, without needing to read.
 - **Cap ~10–12 phrases per category** so the whole grid fits on one screen with no scrolling — if a category grows past that in practice, split it into a new top-level category rather than nesting a sub-menu (an extra tap level is worse than an extra home-screen button).
@@ -191,11 +191,11 @@ Categories below are listed in the fixed display order defined in §5.1.1 (urgen
 | 喉 |
 | 氣管 |
 
-### 如廁與護理 (Toilet & Personal Care)
+### 護理 (Toilet & Personal Care)
 | Phrase |
 |---|
 | 想去廁所 |
-| 想換片/尿片 |
+| 想換片 |
 | 想抹身 |
 | 想坐起身 |
 | 想瞓返低 |
@@ -212,9 +212,9 @@ Categories below are listed in the fixed display order defined in §5.1.1 (urgen
 | 唔想食 |
 | 想食粥 |
 | 想飲湯 |
-| 太熱（食物） |
-| 太凍（食物） |
-| 呢個我食唔得 |
+| 太熱 |
+| 太凍 |
+| 呢個我唔食得 |
 | 我對呢啲敏感 |
 | 想漱口 |
 
@@ -230,7 +230,7 @@ Categories below are listed in the fixed display order defined in §5.1.1 (urgen
 | 我想靜一靜 |
 | 唔該慢慢嚟 |
 
-### 日常用語 (Common Phrases)
+### 日常 (Common Phrases)
 | Phrase |
 |---|
 | 唔該 |

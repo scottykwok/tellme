@@ -1,7 +1,7 @@
 const SETTINGS_KEY = 'tm_settings'
 const RECENT_KEY = 'tm_recent'
 
-export const FONT_SIZES = ['large', 'xlarge', 'xxlarge']
+export const FONT_SIZES = ['large', 'xlarge', 'xxlarge', 'xxxlarge', 'xxxxlarge']
 export const THEMES = ['light', 'dark', 'highContrast']
 
 export const DEFAULT_SETTINGS = {
