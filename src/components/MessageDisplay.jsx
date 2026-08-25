@@ -9,8 +9,8 @@ export default function MessageDisplay({ text, onDismiss }) {
         if (e.key === 'Enter' || e.key === ' ') onDismiss()
       }}
     >
+      <div className="dismiss-hint">← 返回</div>
       <div className="message-text">{text}</div>
-      <div className="dismiss-hint">撳一下返回</div>
     </div>
   )
 }

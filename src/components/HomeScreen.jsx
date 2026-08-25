@@ -47,7 +47,7 @@ export default function HomeScreen({
               onClick={() => onSelectCategory(cat.id)}
             >
               <span className="cat-icon">{cat.icon}</span>
-              <span>{cat.label}</span>
+              <span className="cat-label">{cat.label}</span>
             </button>
           ))}
         </div>
